@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+//Reference:
+//https://saitoxu.io/2017/03/21/react-tic-tac-toe.html
+
 class App extends Component {
   render() {
     return (

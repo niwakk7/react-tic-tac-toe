@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import Board from './Board';
 
+// 盤面の状態や手番、履歴の管理をします
 class Game extends Component {
   constructor() {
     super();
     this.state = {
+      // 何回目か
       stepNumber: 0,
+
       history: [{
         squares: Array(9).fill(null)
       }],
@@ -16,6 +19,7 @@ class Game extends Component {
   handleClick(i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[this.state.stepNumber];
+    console.log(this.state.stepNumber)
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
